@@ -37,12 +37,12 @@ func run() error {
 		}
 	}()
 
-	err = db.MigrateDb("migrations")
-	if err != nil {
-		logger.Errorf("failed making migrations: %s", err)
-		return err
-	}
-	logger.Info("migrations implemented")
+	//err = db.MigrateDb("migrations")
+	//if err != nil {
+	//	logger.Errorf("failed making migrations: %s", err)
+	//	return err
+	//}
+	//logger.Info("migrations implemented")
 
 	telegram.Run(logger)
 
